@@ -24,6 +24,8 @@ This program only needs the <metadata> scope (../auth/gmail.metadata in Google C
 -- Using --
 
 
+*NOTE: There is no volume control for this app; the it will be as loud as allowed by Windows, and it plays a sound on startup and after finishing initialising, so you may want to adjust your Windows volume accordingly beforehand*
+
 There is a small modal window inthe lower right corner (by default, can be disabled with a setting); left click to disable alarm.
 
 Right click to open Message History. Middle click (click the third button on your mouse) to open settings.
