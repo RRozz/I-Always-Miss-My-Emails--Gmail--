@@ -5,7 +5,7 @@ I Always Miss My E-mails! (iamme)
 
 Built with Java jdk 12
 
--- Building --
+# -- Building --
 
 To build this, you need Gradle
 
@@ -21,7 +21,7 @@ This program only needs the <metadata> scope (../auth/gmail.metadata in Google C
 
 
   
--- Using --
+# -- Using --
 
 
 *NOTE: There is no volume control for this app; the it will be as loud as allowed by Windows, and it plays a sound on startup and after finishing initialising, so you may want to adjust your Windows volume accordingly beforehand*
