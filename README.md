@@ -9,10 +9,10 @@ Built with Java jdk 12
 
 To build this, you need Gradle
 
-You can follow Google's guide here: [url=https://developers.google.com/gmail/api/quickstart/java]Java Quickstart[/url]
+You can follow Google's guide here (Java Quickstart): https://developers.google.com/gmail/api/quickstart/java
 
 In that guide, you need to enable the Gmail API & download the resulting credentials.json to yourProjectDir/src/resources/
-You will also need a Google Cloud project, which should be created when you enable the Gmail API (? been a while, forgot). You can edit your project's OAuth Consent screen at [url=https://console.cloud.google.com/apis/]this page[/url]; just go to Credentials -> OAuth Consent Screen.
+You will also need a Google Cloud project, which should be created when you enable the Gmail API (? been a while, forgot). You can edit your project's OAuth Consent screen at https://console.cloud.google.com/apis/; just go to Credentials -> OAuth Consent Screen.
 
 When you start it (either via "gradle run" or the resulting .bat file of "gradle installDist"), it will open your default internet browser and show your Google Cloud project's OAuth Consent Screen (and probably warn you that your project has not been verified by Google, but as long as it's your project, it's fine of course).
 
