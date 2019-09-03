@@ -164,7 +164,7 @@ public class iamme implements Runnable{
 	protected static int loopsTillFullSync = 0; // current counter for auto full sync; starts at 0 and increases to autoFullSyncInterval; will do a full sync and reset to 0 when it reaches auto full sync interval
 	protected static boolean allOverlaysOff = false; // if this is true, then all overlays will close; this is set to false everytime before an overlay is created; this is set to true when the user left-clicks the modal window, allowing the user to close all overlays with just one click
 	
-	protected static String recentChanges = "Version Codename: Awesome Alpha Arctichare (A A A)\nRecent changes:\n-Will now automatically perform a full sync at a specified interval\n-display message meta info when gmail response contains only 'messages'\n-if all notification overlays are closed, alarm is disarmed\n-if the modal JDialog is clicked, all notification overlays will be closed\n-New notifications no longer steal focus\n-Less debug output to Message History and console\n-No more listHistory if in need of a full sync";
+	protected static String recentChanges = "Version Codename: Awesome Alpha Beowulf (A A B)\nRecent changes:\n-Only disarm alarm if notification was closed manually, not by timeout";
 	
 	Thread t;
 
@@ -210,6 +210,7 @@ public class iamme implements Runnable{
 		//JLabel infolabel; // this would be used to say "Click this to close" after i remove the button in the JDialog and add a label click listener instead
 		private int msgIndex;
 		private boolean disposed = false;
+		private boolean closedManually = false;
 		notification(int myIndex){
 			msgIndex = myIndex;
 			frame = new JDialog();
@@ -234,6 +235,7 @@ public class iamme implements Runnable{
 				public void actionPerformed(final ActionEvent e){
 					frame.dispose();
 					disposed = true;
+					closedManually = true;
 				}
 			});
 			closebtn.setMargin(new Insets(1,4,1,4));
@@ -270,16 +272,18 @@ public class iamme implements Runnable{
 				msginfo_overflow.remove(0);
 				handle_message(new msg_info(tmpmsg.from, tmpmsg.subject));
 			}
-			// now that it's closed, check to see if this was the last notification open; if it is, then disarm the alarm so that the user doesn't have to do that separately
-			boolean empty_overlay = true;
-			for(int xint = 0;xint < 5;xint++){
-				if(overlay_active[xint]){
-					empty_overlay = false;
-					break;
+			if(closedManually){
+				// if it was closed manually (clicked X, not timeout), check to see if this was the last notification open; if it is, then disarm the alarm so that the user doesn't have to do that separately
+				boolean empty_overlay = true;
+				for(int xint = 0;xint < 5;xint++){
+					if(overlay_active[xint]){
+						empty_overlay = false;
+						break;
+					}
 				}
-			}
-			if(empty_overlay){
-				disarmAlarm();
+				if(empty_overlay){
+					disarmAlarm();
+				}
 			}
 		}
 	}
