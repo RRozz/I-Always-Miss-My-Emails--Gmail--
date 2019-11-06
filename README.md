@@ -39,4 +39,4 @@ This once-a-minute check means that there will always be a delay of up to 2 minu
 
 When iamme receives the message that you have received a new email, it will play a sound (if enabled, then a sound defined by a setting) and start to play a continuing sound (if enabled, also defined in settings) until the alarm is disabled. There will also be a modal JDialog that will display the email's subject sender -- the JDialog can be closed via a button inside of the JDialog.
 
-(There can be up to 5 JDialog notifications displayed at once, and there is a queue in place to allow a much larger number to wait for their turn to show after other JDialogs have been closed, but i'm not popular enough to get more than 1 email per minute, so that function may have some unforseen bugs due to a lack of proper testing.)
+(There can be up to 5 JDialog notifications displayed at once, and there is a queue in place to allows a much larger number to wait for their turn to show after other JDialogs have been closed, but I'm not popular enough to get more than 1 email per minute, so that function may have some unforseen bugs due to a lack of proper testing.)
