@@ -24,7 +24,7 @@ This program only needs the <metadata> scope (../auth/gmail.metadata in Google C
 # -- Using --
 
 
-*NOTE: There is no volume control for this app; the it will be as loud as allowed by Windows, and it plays a sound on startup and after finishing initialising, so you may want to adjust your Windows volume accordingly beforehand*
+*NOTE: There is no volume control for this app; it will be as loud as allowed by Windows, and it plays a sound on startup, so you may want to adjust your Windows volume accordingly beforehand*
 
 There is a small modal window inthe lower right corner (by default, can be disabled with a setting); left click to disable alarm.
 
