@@ -1,7 +1,7 @@
 # I Always Miss My Emails (Gmail)
 Java desktop application to check gmail and display notifications &amp; play sounds for new messages
 
-![alt test](Screenshots/iammescreenshot.gif)
+![alt test](Screenshots/iamme.gif)
 
 I Always Miss My E-mails! (iamme)
 
